@@ -1,0 +1,182 @@
+// Prisma schema for Remo-SaaS
+// Video generation platform for organizations
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Organization (customer account)
+model Organization {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+
+  // Branding
+  logoUrl         String?
+  primaryColor    String   @default("#3B82F6")
+  secondaryColor  String   @default("#1E40AF")
+  accentColor     String   @default("#F59E0B")
+  fontFamily      String   @default("Inter")
+
+  // Subscription
+  plan            Plan     @default(FREE)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  users           User[]
+  dataSets        DataSet[]
+  renderJobs      RenderJob[]
+}
+
+enum Plan {
+  FREE
+  STARTER
+  PRO
+  ENTERPRISE
+}
+
+// User (via Google OAuth)
+model User {
+  id              String   @id @default(cuid())
+  googleId        String   @unique
+  email           String   @unique
+  name            String?
+  image           String?
+
+  organizationId  String?
+  organization    Organization? @relation(fields: [organizationId], references: [id])
+  role            Role     @default(MEMBER)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+enum Role {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+// DataSet - uploaded data for video generation
+model DataSet {
+  id              String   @id @default(cuid())
+  name            String
+  category        Category
+
+  // Raw uploaded data (JSON)
+  rawData         Json
+
+  // Parsed/validated data
+  parsedData      Json?
+  parseStatus     ParseStatus @default(PENDING)
+  parseError      String?
+
+  organizationId  String
+  organization    Organization @relation(fields: [organizationId], references: [id])
+
+  renderJobs      RenderJob[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+enum Category {
+  // Sports
+  TRACK_AND_FIELD
+  RUNNING_CLUB
+  SWIMMING
+  BASEBALL
+  BASKETBALL
+  GYM_MEMBERSHIP
+
+  // Business
+  SALES_TEAM
+  REP_OVERVIEW
+}
+
+enum ParseStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+// RenderJob - video generation job
+model RenderJob {
+  id              String   @id @default(cuid())
+
+  // Template selection
+  category        Category
+  templateId      String   // e.g., "track-athlete-season-recap"
+
+  // Input data
+  inputProps      Json     // Resolved props for Remotion
+
+  // Output
+  aspectRatio     AspectRatio
+  status          RenderStatus @default(QUEUED)
+  progress        Int      @default(0)
+
+  videoUrl        String?  // S3 key
+  thumbnailUrl    String?
+  duration        Int?     // seconds
+
+  error           String?
+
+  // Queue tracking
+  bullJobId       String?
+
+  dataSetId       String
+  dataSet         DataSet  @relation(fields: [dataSetId], references: [id])
+
+  organizationId  String
+  organization    Organization @relation(fields: [organizationId], references: [id])
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  startedAt       DateTime?
+  completedAt     DateTime?
+}
+
+enum AspectRatio {
+  LANDSCAPE  // 16:9 (1920x1080)
+  PORTRAIT   // 9:16 (1080x1920)
+  SQUARE     // 1:1 (1080x1080)
+}
+
+enum RenderStatus {
+  QUEUED
+  RENDERING
+  COMPLETED
+  FAILED
+}
+
+// Template metadata (seeded, not user-created)
+model Template {
+  id              String   @id  // e.g., "track-athlete-season-recap"
+  name            String
+  description     String
+  category        Category
+
+  // Preview
+  previewUrl      String?
+
+  // Schema for required data
+  dataSchema      Json     // JSON Schema for validation
+
+  // Remotion composition
+  compositionId   String   // Maps to Remotion composition
+
+  // Availability
+  isActive        Boolean  @default(true)
+  minPlan         Plan     @default(FREE)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
