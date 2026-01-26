@@ -45,6 +45,11 @@ const TEMPLATE_REGISTRY = [
   { id: 'rep-performance-card', name: 'Performance Card', category: 'REP_OVERVIEW', compositionId: 'rep-performance-card', description: 'Individual rep stats card' },
   { id: 'rep-year-in-review', name: 'Year in Review', category: 'REP_OVERVIEW', compositionId: 'rep-year-in-review', description: 'Annual performance summary' },
   { id: 'rep-deal-celebration', name: 'Deal Celebration', category: 'REP_OVERVIEW', compositionId: 'rep-deal-celebration', description: 'Big deal closed animation' },
+
+  // Library
+  { id: 'library-patron-year-review', name: 'Patron Year Review', category: 'LIBRARY', compositionId: 'library-patron-year-review', description: 'Individual patron reading stats with book covers and authors' },
+  { id: 'library-top-books-showcase', name: 'Top Books Showcase', category: 'LIBRARY', compositionId: 'library-top-books-showcase', description: 'Most borrowed books with creative cover displays' },
+  { id: 'library-reading-journey', name: 'Reading Journey', category: 'LIBRARY', compositionId: 'library-reading-journey', description: 'Animated timeline of books borrowed over a period' },
 ]
 
 export async function GET(request: Request) {

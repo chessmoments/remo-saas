@@ -38,6 +38,11 @@ import { RepPerformanceCard } from './business/rep/PerformanceCard'
 import { RepYearInReview } from './business/rep/YearInReview'
 import { RepDealCelebration } from './business/rep/DealCelebration'
 
+// Library Templates
+import { LibraryPatronYearReview } from './library/PatronYearReview'
+import { LibraryTopBooksShowcase } from './library/TopBooksShowcase'
+import { LibraryReadingJourney } from './library/ReadingJourney'
+
 // Aspect ratio configurations
 const ASPECT_RATIOS = {
   LANDSCAPE: { width: 1920, height: 1080 },
@@ -320,6 +325,41 @@ export const RemotionRoot: React.FC = () => {
         id="rep-deal-celebration"
         component={asLoose(RepDealCelebration)}
         durationInFrames={300}
+        fps={30}
+        {...ASPECT_RATIOS.LANDSCAPE}
+        defaultProps={{
+          branding: { primaryColor: '#3B82F6', secondaryColor: '#1E40AF', accentColor: '#F59E0B' },
+          data: {},
+        }}
+      />
+
+      {/* Library */}
+      <Composition
+        id="library-patron-year-review"
+        component={asLoose(LibraryPatronYearReview)}
+        durationInFrames={900}
+        fps={30}
+        {...ASPECT_RATIOS.LANDSCAPE}
+        defaultProps={{
+          branding: { primaryColor: '#3B82F6', secondaryColor: '#1E40AF', accentColor: '#F59E0B' },
+          data: {},
+        }}
+      />
+      <Composition
+        id="library-top-books-showcase"
+        component={asLoose(LibraryTopBooksShowcase)}
+        durationInFrames={750}
+        fps={30}
+        {...ASPECT_RATIOS.LANDSCAPE}
+        defaultProps={{
+          branding: { primaryColor: '#3B82F6', secondaryColor: '#1E40AF', accentColor: '#F59E0B' },
+          data: {},
+        }}
+      />
+      <Composition
+        id="library-reading-journey"
+        component={asLoose(LibraryReadingJourney)}
+        durationInFrames={1050}
         fps={30}
         {...ASPECT_RATIOS.LANDSCAPE}
         defaultProps={{

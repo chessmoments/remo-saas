@@ -26,6 +26,7 @@ const CATEGORIES = [
   { value: 'GYM_MEMBERSHIP', label: 'Gym Membership', group: 'Sports' },
   { value: 'SALES_TEAM', label: 'Sales Team', group: 'Business' },
   { value: 'REP_OVERVIEW', label: 'Rep Overview', group: 'Business' },
+  { value: 'LIBRARY', label: 'Library', group: 'Education' },
 ]
 
 export default function NewDatasetPage() {

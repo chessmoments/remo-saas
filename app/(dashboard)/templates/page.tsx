@@ -31,6 +31,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   GYM_MEMBERSHIP: 'Gym Membership',
   SALES_TEAM: 'Sales Team',
   REP_OVERVIEW: 'Rep Overview',
+  LIBRARY: 'Library',
 }
 
 export default function TemplatesPage() {

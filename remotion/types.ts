@@ -219,3 +219,38 @@ export interface RepOverviewData {
     }>
   }
 }
+
+// Library
+export interface LibraryData {
+  library: { name: string; logo?: string }
+  period: { start: string; end: string; name?: string }
+  patrons: Array<{
+    id: string
+    name: string
+    photo?: string
+    memberSince: string
+    loans: Array<{
+      book: {
+        title: string
+        author: string
+        coverUrl?: string
+        isbn?: string
+        genre?: string
+        pageCount?: number
+      }
+      borrowedDate: string
+      returnedDate?: string
+    }>
+  }>
+  books: Array<{
+    id: string
+    title: string
+    author: string
+    coverUrl?: string
+    isbn?: string
+    genre?: string
+    pageCount?: number
+    totalLoans: number
+    rating?: number
+  }>
+}
