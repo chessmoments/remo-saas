@@ -16,7 +16,7 @@ const s3Client = new S3Client({
   forcePathStyle: true,
 })
 
-const BUCKET = process.env.BUCKET || 'remo-saas'
+const BUCKET = process.env.BUCKET || 'videocardfactory'
 
 export async function uploadFile(
   key: string,

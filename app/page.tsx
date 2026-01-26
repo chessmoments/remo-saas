@@ -43,7 +43,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2">
             <Video className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold">Remo</span>
+            <span className="text-xl font-bold">VideoCardFactory</span>
           </div>
           <nav className="flex items-center gap-6">
             <Link href="/login" className="text-sm font-medium text-gray-600 hover:text-gray-900">
@@ -163,10 +163,10 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Video className="h-6 w-6 text-blue-600" />
-              <span className="font-bold">Remo</span>
+              <span className="font-bold">VideoCardFactory</span>
             </div>
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Remo. All rights reserved.
+              © {new Date().getFullYear()} VideoCardFactory. All rights reserved.
             </p>
           </div>
         </div>

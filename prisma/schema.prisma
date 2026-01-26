@@ -1,4 +1,4 @@
-// Prisma schema for Remo-SaaS
+// Prisma schema for VideoCardFactory
 // Video generation platform for organizations
 
 generator client {
@@ -98,6 +98,9 @@ enum Category {
   // Business
   SALES_TEAM
   REP_OVERVIEW
+
+  // Education
+  LIBRARY
 }
 
 enum ParseStatus {

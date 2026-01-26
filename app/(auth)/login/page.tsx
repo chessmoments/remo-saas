@@ -13,7 +13,7 @@ export default function LoginPage() {
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
             <Video className="h-8 w-8 text-blue-600" />
           </div>
-          <CardTitle className="text-2xl">Welcome to Remo</CardTitle>
+          <CardTitle className="text-2xl">Welcome to VideoCardFactory</CardTitle>
           <CardDescription>
             Generate personalized videos from your data
           </CardDescription>

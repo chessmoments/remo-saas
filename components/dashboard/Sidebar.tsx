@@ -29,7 +29,7 @@ export function Sidebar() {
       <div className="flex h-16 items-center px-6">
         <Link href="/dashboard" className="flex items-center gap-2">
           <Video className="h-8 w-8 text-blue-500" />
-          <span className="text-xl font-bold text-white">Remo</span>
+          <span className="text-xl font-bold text-white">VideoCardFactory</span>
         </Link>
       </div>
 
