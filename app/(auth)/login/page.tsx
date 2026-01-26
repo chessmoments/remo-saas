@@ -1,11 +1,12 @@
-'use client'
-
-import { signIn } from 'next-auth/react'
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Video } from 'lucide-react'
 
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || ''
+
 export default function LoginPage() {
+  const googleAuthUrl = `${API_HOST}/api/auth/signin/google?callbackUrl=${encodeURIComponent('/dashboard')}`
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 p-4">
       <Card className="w-full max-w-md">
@@ -19,12 +20,11 @@ export default function LoginPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Button
-            className="w-full"
-            size="lg"
-            onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+          <Link
+            href={googleAuthUrl}
+            className="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
-            <svg className="mr-2 h-5 w-5" viewBox="0 0 24 24">
+            <svg className="h-5 w-5" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -43,7 +43,7 @@ export default function LoginPage() {
               />
             </svg>
             Continue with Google
-          </Button>
+          </Link>
           <p className="mt-4 text-center text-sm text-gray-500">
             By signing in, you agree to our Terms of Service and Privacy Policy.
           </p>

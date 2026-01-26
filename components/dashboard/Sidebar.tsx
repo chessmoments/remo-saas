@@ -11,7 +11,8 @@ import {
   LogOut,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { signOut } from 'next-auth/react'
+
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || ''
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
@@ -23,6 +24,7 @@ const navigation = [
 
 export function Sidebar() {
   const pathname = usePathname()
+  const signOutUrl = `${API_HOST}/api/auth/signout?callbackUrl=${encodeURIComponent('/')}`
 
   return (
     <div className="flex h-full w-64 flex-col bg-gray-900">
@@ -55,13 +57,13 @@ export function Sidebar() {
       </nav>
 
       <div className="border-t border-gray-800 p-4">
-        <button
-          onClick={() => signOut({ callbackUrl: '/' })}
+        <Link
+          href={signOutUrl}
           className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-400 transition-colors hover:bg-gray-800 hover:text-white"
         >
           <LogOut className="h-5 w-5" />
           Sign Out
-        </button>
+        </Link>
       </div>
     </div>
   )
