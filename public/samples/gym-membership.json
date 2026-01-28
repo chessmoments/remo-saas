@@ -1,0 +1,49 @@
+{
+  "gym": { "name": "IronWorks Fitness" },
+  "period": { "start": "2025-01-01", "end": "2025-06-30" },
+  "members": [
+    {
+      "id": "mem-001",
+      "name": "Rachel Torres",
+      "memberSince": "2023-06-15",
+      "visits": [
+        { "date": "2025-01-02", "duration": 75, "activities": ["Strength Training", "Cardio"] },
+        { "date": "2025-01-04", "duration": 60, "activities": ["Yoga"] },
+        { "date": "2025-01-06", "duration": 90, "activities": ["Strength Training", "Swimming"] },
+        { "date": "2025-01-08", "duration": 45, "activities": ["Cardio"] },
+        { "date": "2025-01-10", "duration": 60, "activities": ["Strength Training"] }
+      ],
+      "achievements": [
+        { "name": "100 Visit Streak", "date": "2025-03-12", "description": "Visited the gym 100 times in a row without missing a week" },
+        { "name": "Early Bird", "date": "2025-02-01", "description": "30 workouts before 7am" }
+      ]
+    },
+    {
+      "id": "mem-002",
+      "name": "Brandon Kim",
+      "memberSince": "2024-01-10",
+      "visits": [
+        { "date": "2025-01-03", "duration": 90, "activities": ["Strength Training"] },
+        { "date": "2025-01-05", "duration": 60, "activities": ["CrossFit"] },
+        { "date": "2025-01-07", "duration": 75, "activities": ["Strength Training", "Cardio"] },
+        { "date": "2025-01-09", "duration": 60, "activities": ["CrossFit"] }
+      ],
+      "achievements": [
+        { "name": "Personal Best", "date": "2025-04-18", "description": "Deadlift 200kg" }
+      ]
+    },
+    {
+      "id": "mem-003",
+      "name": "Lisa Patel",
+      "memberSince": "2024-09-01",
+      "visits": [
+        { "date": "2025-01-02", "duration": 45, "activities": ["Pilates"] },
+        { "date": "2025-01-04", "duration": 60, "activities": ["Swimming"] },
+        { "date": "2025-01-07", "duration": 50, "activities": ["Yoga", "Cardio"] }
+      ],
+      "achievements": [
+        { "name": "Consistency Award", "date": "2025-05-01", "description": "Worked out at least 3 times per week for 3 months" }
+      ]
+    }
+  ]
+}

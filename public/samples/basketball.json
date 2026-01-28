@@ -1,0 +1,42 @@
+{
+  "season": { "year": 2025, "league": "City Basketball League" },
+  "team": { "name": "Northside Eagles" },
+  "players": [
+    {
+      "id": "pl-001",
+      "name": "Jordan Mitchell",
+      "number": 23,
+      "position": "SG",
+      "stats": { "gamesPlayed": 24, "ppg": 22.4, "rpg": 4.8, "apg": 5.1, "spg": 1.6, "bpg": 0.3, "fgPct": 0.47, "threePct": 0.39, "ftPct": 0.88 }
+    },
+    {
+      "id": "pl-002",
+      "name": "Andre Washington",
+      "number": 34,
+      "position": "C",
+      "stats": { "gamesPlayed": 24, "ppg": 16.2, "rpg": 10.5, "apg": 2.3, "spg": 0.7, "bpg": 2.1, "fgPct": 0.54, "threePct": 0.28, "ftPct": 0.72 }
+    },
+    {
+      "id": "pl-003",
+      "name": "Kevin Nguyen",
+      "number": 11,
+      "position": "PG",
+      "stats": { "gamesPlayed": 22, "ppg": 14.8, "rpg": 3.2, "apg": 8.4, "spg": 2.1, "bpg": 0.2, "fgPct": 0.44, "threePct": 0.36, "ftPct": 0.82 }
+    },
+    {
+      "id": "pl-004",
+      "name": "Marcus Reed",
+      "number": 7,
+      "position": "SF",
+      "stats": { "gamesPlayed": 24, "ppg": 12.6, "rpg": 6.1, "apg": 2.8, "spg": 1.3, "bpg": 0.8, "fgPct": 0.46, "threePct": 0.34, "ftPct": 0.79 }
+    }
+  ],
+  "games": [
+    { "date": "2025-01-08", "opponent": "Southside Heat", "score": { "us": 98, "them": 92 }, "isHome": true },
+    { "date": "2025-01-15", "opponent": "Westend Wolves", "score": { "us": 85, "them": 91 }, "isHome": false },
+    { "date": "2025-01-22", "opponent": "Downtown Kings", "score": { "us": 104, "them": 88 }, "isHome": true },
+    { "date": "2025-01-29", "opponent": "Eastside Rams", "score": { "us": 96, "them": 94 }, "isHome": false },
+    { "date": "2025-02-05", "opponent": "Southside Heat", "score": { "us": 102, "them": 99 }, "isHome": false },
+    { "date": "2025-02-12", "opponent": "Harbor Hawks", "score": { "us": 88, "them": 76 }, "isHome": true }
+  ]
+}

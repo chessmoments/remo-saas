@@ -1,0 +1,37 @@
+{
+  "company": { "name": "Acme Software Inc." },
+  "period": { "start": "2025-01-01", "end": "2025-12-31" },
+  "rep": {
+    "id": "rep-001",
+    "name": "Amanda Foster",
+    "title": "Senior Account Executive",
+    "territory": "West Coast Enterprise",
+    "quota": 3000000,
+    "achieved": 2740000,
+    "dealsClosed": 18,
+    "avgDealSize": 152222,
+    "winRate": 0.34,
+    "meetings": 245,
+    "calls": 892,
+    "emails": 3420,
+    "topDeals": [
+      { "name": "GlobalTech Platform License", "value": 540000, "closedDate": "2025-03-28" },
+      { "name": "Atlas Logistics Enterprise", "value": 410000, "closedDate": "2025-06-15" },
+      { "name": "Meridian Corp Multi-Year", "value": 380000, "closedDate": "2025-09-02" }
+    ],
+    "monthlyRevenue": [
+      { "month": "Jan", "revenue": 180000 },
+      { "month": "Feb", "revenue": 220000 },
+      { "month": "Mar", "revenue": 340000 },
+      { "month": "Apr", "revenue": 195000 },
+      { "month": "May", "revenue": 260000 },
+      { "month": "Jun", "revenue": 310000 },
+      { "month": "Jul", "revenue": 175000 },
+      { "month": "Aug", "revenue": 240000 },
+      { "month": "Sep", "revenue": 285000 },
+      { "month": "Oct", "revenue": 210000 },
+      { "month": "Nov", "revenue": 165000 },
+      { "month": "Dec", "revenue": 160000 }
+    ]
+  }
+}

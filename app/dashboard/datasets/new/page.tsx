@@ -14,19 +14,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Upload, ArrowLeft } from 'lucide-react'
+import { Upload, ArrowLeft, Download } from 'lucide-react'
 import Link from 'next/link'
 
 const CATEGORIES = [
-  { value: 'TRACK_AND_FIELD', label: 'Track & Field', group: 'Sports' },
-  { value: 'RUNNING_CLUB', label: 'Running Club', group: 'Sports' },
-  { value: 'SWIMMING', label: 'Swimming', group: 'Sports' },
-  { value: 'BASEBALL', label: 'Baseball', group: 'Sports' },
-  { value: 'BASKETBALL', label: 'Basketball', group: 'Sports' },
-  { value: 'GYM_MEMBERSHIP', label: 'Gym Membership', group: 'Sports' },
-  { value: 'SALES_TEAM', label: 'Sales Team', group: 'Business' },
-  { value: 'REP_OVERVIEW', label: 'Rep Overview', group: 'Business' },
-  { value: 'LIBRARY', label: 'Library', group: 'Education' },
+  { value: 'TRACK_AND_FIELD', label: 'Track & Field', group: 'Sports', sample: '/samples/track-and-field.json' },
+  { value: 'RUNNING_CLUB', label: 'Running Club', group: 'Sports', sample: '/samples/running-club.json' },
+  { value: 'SWIMMING', label: 'Swimming', group: 'Sports', sample: '/samples/swimming.json' },
+  { value: 'BASEBALL', label: 'Baseball', group: 'Sports', sample: '/samples/baseball.json' },
+  { value: 'BASKETBALL', label: 'Basketball', group: 'Sports', sample: '/samples/basketball.json' },
+  { value: 'GYM_MEMBERSHIP', label: 'Gym Membership', group: 'Sports', sample: '/samples/gym-membership.json' },
+  { value: 'SALES_TEAM', label: 'Sales Team', group: 'Business', sample: '/samples/sales-team.json' },
+  { value: 'REP_OVERVIEW', label: 'Rep Overview', group: 'Business', sample: '/samples/rep-overview.json' },
+  { value: 'LIBRARY', label: 'Library', group: 'Education', sample: '/samples/library.json' },
 ]
 
 export default function NewDatasetPage() {
@@ -132,6 +132,19 @@ export default function NewDatasetPage() {
 
               <div className="space-y-2">
                 <Label>JSON Data</Label>
+                {category && (
+                  <p className="text-sm text-gray-500">
+                    Not sure about the format?{' '}
+                    <a
+                      href={CATEGORIES.find((c) => c.value === category)?.sample}
+                      download
+                      className="inline-flex items-center gap-1 font-medium text-blue-600 hover:text-blue-800"
+                    >
+                      <Download className="h-3 w-3" />
+                      Download sample JSON
+                    </a>
+                  </p>
+                )}
                 <div className="relative rounded-lg border-2 border-dashed border-gray-300 p-6 text-center">
                   <Upload className="mx-auto h-8 w-8 text-gray-400" />
                   <p className="mt-2 text-sm text-gray-600">

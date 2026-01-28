@@ -1,0 +1,69 @@
+{
+  "season": { "year": 2025, "name": "Winter Championships" },
+  "team": { "name": "Coastal Aquatics" },
+  "swimmers": [
+    {
+      "id": "sw-001",
+      "name": "Aiden Park",
+      "ageGroup": "15-16",
+      "events": [
+        {
+          "stroke": "Freestyle",
+          "distance": 100,
+          "times": [
+            { "date": "2025-01-18", "meetName": "New Year Invitational", "time": 54.32, "isPB": false },
+            { "date": "2025-02-15", "meetName": "Regional Qualifier", "time": 53.18, "isPB": true },
+            { "date": "2025-03-08", "meetName": "Winter Championships", "time": 52.74, "isPB": true }
+          ]
+        },
+        {
+          "stroke": "Butterfly",
+          "distance": 50,
+          "times": [
+            { "date": "2025-01-18", "meetName": "New Year Invitational", "time": 27.45, "isPB": false },
+            { "date": "2025-03-08", "meetName": "Winter Championships", "time": 26.91, "isPB": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sw-002",
+      "name": "Lily Thompson",
+      "ageGroup": "13-14",
+      "events": [
+        {
+          "stroke": "Backstroke",
+          "distance": 100,
+          "times": [
+            { "date": "2025-01-18", "meetName": "New Year Invitational", "time": 68.9, "isPB": false },
+            { "date": "2025-02-15", "meetName": "Regional Qualifier", "time": 67.15, "isPB": true },
+            { "date": "2025-03-08", "meetName": "Winter Championships", "time": 66.42, "isPB": true }
+          ]
+        },
+        {
+          "stroke": "Freestyle",
+          "distance": 200,
+          "times": [
+            { "date": "2025-02-15", "meetName": "Regional Qualifier", "time": 125.6, "isPB": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sw-003",
+      "name": "Noah Garcia",
+      "ageGroup": "15-16",
+      "events": [
+        {
+          "stroke": "Breaststroke",
+          "distance": 100,
+          "times": [
+            { "date": "2025-01-18", "meetName": "New Year Invitational", "time": 72.1, "isPB": false },
+            { "date": "2025-02-15", "meetName": "Regional Qualifier", "time": 70.85, "isPB": true },
+            { "date": "2025-03-08", "meetName": "Winter Championships", "time": 69.93, "isPB": true }
+          ]
+        }
+      ]
+    }
+  ]
+}

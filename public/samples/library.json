@@ -1,0 +1,62 @@
+{
+  "library": { "name": "Maplewood Public Library" },
+  "period": { "start": "2025-01-01", "end": "2025-12-31", "name": "2025 Year in Review" },
+  "patrons": [
+    {
+      "id": "pat-001",
+      "name": "Eleanor Vance",
+      "memberSince": "2019-04-12",
+      "loans": [
+        {
+          "book": { "title": "The Midnight Library", "author": "Matt Haig", "genre": "Fiction", "pageCount": 304 },
+          "borrowedDate": "2025-01-08",
+          "returnedDate": "2025-01-22"
+        },
+        {
+          "book": { "title": "Klara and the Sun", "author": "Kazuo Ishiguro", "genre": "Fiction", "pageCount": 320 },
+          "borrowedDate": "2025-02-14",
+          "returnedDate": "2025-03-01"
+        },
+        {
+          "book": { "title": "Project Hail Mary", "author": "Andy Weir", "genre": "Science Fiction", "pageCount": 496 },
+          "borrowedDate": "2025-04-03",
+          "returnedDate": "2025-04-20"
+        },
+        {
+          "book": { "title": "Piranesi", "author": "Susanna Clarke", "genre": "Fantasy", "pageCount": 272 },
+          "borrowedDate": "2025-06-11",
+          "returnedDate": "2025-06-25"
+        }
+      ]
+    },
+    {
+      "id": "pat-002",
+      "name": "Marcus Webb",
+      "memberSince": "2021-08-30",
+      "loans": [
+        {
+          "book": { "title": "Atomic Habits", "author": "James Clear", "genre": "Self-Help", "pageCount": 320 },
+          "borrowedDate": "2025-01-15",
+          "returnedDate": "2025-02-05"
+        },
+        {
+          "book": { "title": "Sapiens", "author": "Yuval Noah Harari", "genre": "Non-Fiction", "pageCount": 464 },
+          "borrowedDate": "2025-03-20",
+          "returnedDate": "2025-04-15"
+        },
+        {
+          "book": { "title": "Thinking, Fast and Slow", "author": "Daniel Kahneman", "genre": "Psychology", "pageCount": 499 },
+          "borrowedDate": "2025-05-10",
+          "returnedDate": "2025-06-08"
+        }
+      ]
+    }
+  ],
+  "books": [
+    { "id": "bk-001", "title": "The Midnight Library", "author": "Matt Haig", "genre": "Fiction", "pageCount": 304, "totalLoans": 47, "rating": 4.3 },
+    { "id": "bk-002", "title": "Atomic Habits", "author": "James Clear", "genre": "Self-Help", "pageCount": 320, "totalLoans": 62, "rating": 4.6 },
+    { "id": "bk-003", "title": "Project Hail Mary", "author": "Andy Weir", "genre": "Science Fiction", "pageCount": 496, "totalLoans": 38, "rating": 4.7 },
+    { "id": "bk-004", "title": "Sapiens", "author": "Yuval Noah Harari", "genre": "Non-Fiction", "pageCount": 464, "totalLoans": 41, "rating": 4.4 },
+    { "id": "bk-005", "title": "Klara and the Sun", "author": "Kazuo Ishiguro", "genre": "Fiction", "pageCount": 320, "totalLoans": 29, "rating": 4.1 }
+  ]
+}

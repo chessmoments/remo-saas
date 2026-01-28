@@ -1,0 +1,38 @@
+{
+  "club": { "name": "Portland Pacers Running Club" },
+  "period": { "start": "2025-01-01", "end": "2025-06-30" },
+  "members": [
+    {
+      "id": "mem-001",
+      "name": "Sarah Chen",
+      "totalDistance": 1842,
+      "totalRuns": 156,
+      "races": [
+        { "name": "Portland Half Marathon", "date": "2025-03-22", "distance": 21.1, "time": 5640, "pace": 267 },
+        { "name": "Rose City 10K", "date": "2025-05-04", "distance": 10, "time": 2520, "pace": 252 },
+        { "name": "Summer Solstice 5K", "date": "2025-06-21", "distance": 5, "time": 1185, "pace": 237 }
+      ]
+    },
+    {
+      "id": "mem-002",
+      "name": "James Okafor",
+      "totalDistance": 2310,
+      "totalRuns": 198,
+      "races": [
+        { "name": "Portland Half Marathon", "date": "2025-03-22", "distance": 21.1, "time": 4920, "pace": 233 },
+        { "name": "Cascade Marathon", "date": "2025-04-12", "distance": 42.2, "time": 11400, "pace": 270 },
+        { "name": "Rose City 10K", "date": "2025-05-04", "distance": 10, "time": 2160, "pace": 216 }
+      ]
+    },
+    {
+      "id": "mem-003",
+      "name": "Emma Lindqvist",
+      "totalDistance": 1560,
+      "totalRuns": 134,
+      "races": [
+        { "name": "Rose City 10K", "date": "2025-05-04", "distance": 10, "time": 2700, "pace": 270 },
+        { "name": "Summer Solstice 5K", "date": "2025-06-21", "distance": 5, "time": 1260, "pace": 252 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "season": { "year": 2025, "league": "Metro Adult League" },
+  "team": { "name": "Riverside Raptors" },
+  "players": [
+    {
+      "id": "pl-001",
+      "name": "Carlos Rivera",
+      "position": "SS",
+      "battingStats": { "avg": 0.312, "hits": 54, "homeRuns": 8, "rbis": 35, "ops": 0.891 }
+    },
+    {
+      "id": "pl-002",
+      "name": "Tyler Brooks",
+      "position": "P",
+      "battingStats": { "avg": 0.198, "hits": 18, "homeRuns": 2, "rbis": 12, "ops": 0.542 },
+      "pitchingStats": { "era": 2.85, "wins": 9, "losses": 3, "strikeouts": 112, "innings": 98.2 }
+    },
+    {
+      "id": "pl-003",
+      "name": "Mike Tanaka",
+      "position": "CF",
+      "battingStats": { "avg": 0.289, "hits": 48, "homeRuns": 12, "rbis": 42, "ops": 0.854 }
+    },
+    {
+      "id": "pl-004",
+      "name": "David Osei",
+      "position": "1B",
+      "battingStats": { "avg": 0.275, "hits": 44, "homeRuns": 18, "rbis": 56, "ops": 0.912 }
+    }
+  ],
+  "games": [
+    { "date": "2025-04-05", "opponent": "Metro Eagles", "score": { "us": 7, "them": 3 }, "isHome": true },
+    { "date": "2025-04-12", "opponent": "Valley Sox", "score": { "us": 4, "them": 5 }, "isHome": false },
+    { "date": "2025-04-19", "opponent": "Harbor Gulls", "score": { "us": 9, "them": 2 }, "isHome": true },
+    { "date": "2025-04-26", "opponent": "Hillside Cubs", "score": { "us": 6, "them": 6 }, "isHome": false },
+    { "date": "2025-05-03", "opponent": "Metro Eagles", "score": { "us": 3, "them": 1 }, "isHome": false },
+    { "date": "2025-05-10", "opponent": "Downtown Kings", "score": { "us": 8, "them": 4 }, "isHome": true }
+  ]
+}

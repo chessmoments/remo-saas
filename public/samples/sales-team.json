@@ -1,0 +1,47 @@
+{
+  "company": { "name": "Acme Software Inc." },
+  "period": { "start": "2025-01-01", "end": "2025-03-31", "name": "Q1 2025" },
+  "team": {
+    "name": "Enterprise Sales",
+    "quota": 2500000,
+    "achieved": 2180000
+  },
+  "reps": [
+    {
+      "id": "rep-001",
+      "name": "Amanda Foster",
+      "title": "Senior Account Executive",
+      "quota": 750000,
+      "achieved": 820000,
+      "deals": [
+        { "name": "GlobalTech Platform License", "value": 340000, "closedDate": "2025-01-28", "stage": "Closed Won" },
+        { "name": "Meridian Corp Expansion", "value": 280000, "closedDate": "2025-02-15", "stage": "Closed Won" },
+        { "name": "Vertex Industries Renewal", "value": 200000, "closedDate": "2025-03-22", "stage": "Closed Won" }
+      ]
+    },
+    {
+      "id": "rep-002",
+      "name": "Ryan Cho",
+      "title": "Account Executive",
+      "quota": 600000,
+      "achieved": 545000,
+      "deals": [
+        { "name": "Pinnacle Health Systems", "value": 225000, "closedDate": "2025-02-08", "stage": "Closed Won" },
+        { "name": "Summit Financial Group", "value": 180000, "closedDate": "2025-03-01", "stage": "Closed Won" },
+        { "name": "Crestview Education", "value": 140000, "closedDate": "2025-03-28", "stage": "Closed Won" }
+      ]
+    },
+    {
+      "id": "rep-003",
+      "name": "Diana Mensah",
+      "title": "Senior Account Executive",
+      "quota": 750000,
+      "achieved": 815000,
+      "deals": [
+        { "name": "Atlas Logistics Platform", "value": 410000, "closedDate": "2025-01-15", "stage": "Closed Won" },
+        { "name": "Pacific Rim Trading", "value": 245000, "closedDate": "2025-02-20", "stage": "Closed Won" },
+        { "name": "NovaTech Solutions", "value": 160000, "closedDate": "2025-03-10", "stage": "Closed Won" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "season": { "year": 2025, "name": "Spring Season" },
+  "organization": { "name": "Westfield High Athletics" },
+  "athletes": [
+    {
+      "id": "ath-001",
+      "name": "Marcus Johnson",
+      "events": [
+        {
+          "name": "100m",
+          "results": [
+            { "date": "2025-03-15", "meetName": "Season Opener", "result": 11.2, "place": 2, "isPB": false },
+            { "date": "2025-04-05", "meetName": "County Invitational", "result": 10.95, "place": 1, "isPB": true },
+            { "date": "2025-05-10", "meetName": "State Championships", "result": 10.88, "place": 3, "isPB": true }
+          ]
+        },
+        {
+          "name": "200m",
+          "results": [
+            { "date": "2025-03-15", "meetName": "Season Opener", "result": 22.8, "place": 1, "isPB": false },
+            { "date": "2025-04-19", "meetName": "Regional Meet", "result": 22.3, "place": 2, "isPB": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ath-002",
+      "name": "Sofia Ramirez",
+      "events": [
+        {
+          "name": "800m",
+          "results": [
+            { "date": "2025-03-15", "meetName": "Season Opener", "result": 135.4, "place": 1, "isPB": false },
+            { "date": "2025-04-05", "meetName": "County Invitational", "result": 131.2, "place": 1, "isPB": true },
+            { "date": "2025-05-10", "meetName": "State Championships", "result": 129.8, "place": 2, "isPB": true }
+          ]
+        },
+        {
+          "name": "1500m",
+          "results": [
+            { "date": "2025-04-19", "meetName": "Regional Meet", "result": 282.5, "place": 1, "isPB": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ath-003",
+      "name": "Derek Williams",
+      "events": [
+        {
+          "name": "Long Jump",
+          "results": [
+            { "date": "2025-03-15", "meetName": "Season Opener", "result": 6.45, "place": 3, "isPB": false },
+            { "date": "2025-04-05", "meetName": "County Invitational", "result": 6.72, "place": 1, "isPB": true },
+            { "date": "2025-05-10", "meetName": "State Championships", "result": 6.81, "place": 2, "isPB": true }
+          ]
+        }
+      ]
+    }
+  ],
+  "meets": [
+    { "date": "2025-03-15", "name": "Season Opener", "location": "Westfield Stadium" },
+    { "date": "2025-04-05", "name": "County Invitational", "location": "Lincoln Park" },
+    { "date": "2025-04-19", "name": "Regional Meet", "location": "Memorial Field" },
+    { "date": "2025-05-10", "name": "State Championships", "location": "State University Complex" }
+  ]
+}
