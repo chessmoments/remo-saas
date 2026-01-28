@@ -30,7 +30,8 @@ export const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
     },
   })
 
-  const currentValue = interpolate(progress, [0, 1], [0, value])
+  const safeValue = Number.isFinite(value) ? value : 0
+  const currentValue = interpolate(progress, [0, 1], [0, safeValue])
 
   const formatValue = (val: number): string => {
     switch (format) {
