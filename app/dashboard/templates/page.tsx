@@ -46,7 +46,7 @@ function TemplatesContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [templates, setTemplates] = useState<Template[]>([])
-  const [category, setCategory] = useState(searchParams.get('category') || '')
+  const [category, setCategory] = useState(searchParams.get('category') || 'all')
   const [isLoading, setIsLoading] = useState(true)
 
   const datasetId = searchParams.get('datasetId')
@@ -54,7 +54,7 @@ function TemplatesContent() {
   useEffect(() => {
     const fetchTemplates = async () => {
       try {
-        const url = category
+        const url = category && category !== 'all'
           ? `/api/templates?category=${category}`
           : '/api/templates'
         const response = await fetch(url)
@@ -115,7 +115,7 @@ function TemplatesContent() {
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Categories</SelectItem>
+              <SelectItem value="all">All Categories</SelectItem>
               {Object.entries(CATEGORY_LABELS).map(([value, label]) => (
                 <SelectItem key={value} value={value}>
                   {label}
