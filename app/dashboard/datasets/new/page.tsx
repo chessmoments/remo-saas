@@ -132,7 +132,7 @@ export default function NewDatasetPage() {
 
               <div className="space-y-2">
                 <Label>JSON Data</Label>
-                <div className="rounded-lg border-2 border-dashed border-gray-300 p-6 text-center">
+                <div className="relative rounded-lg border-2 border-dashed border-gray-300 p-6 text-center">
                   <Upload className="mx-auto h-8 w-8 text-gray-400" />
                   <p className="mt-2 text-sm text-gray-600">
                     Drag and drop a JSON file, or click to browse
@@ -142,12 +142,6 @@ export default function NewDatasetPage() {
                     accept=".json"
                     onChange={handleFileUpload}
                     className="absolute inset-0 cursor-pointer opacity-0"
-                  />
-                  <Input
-                    type="file"
-                    accept=".json"
-                    onChange={handleFileUpload}
-                    className="mt-3"
                   />
                 </div>
               </div>
