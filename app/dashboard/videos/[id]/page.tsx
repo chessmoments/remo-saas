@@ -29,6 +29,18 @@ export default function VideoDetailPage() {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
+  const fetchDownloadUrl = async () => {
+    try {
+      const response = await fetch(`/api/videos/${params.id}/download`)
+      if (response.ok) {
+        const data = await response.json()
+        setDownloadUrl(data.downloadUrl)
+      }
+    } catch (err) {
+      console.error('Failed to get download URL:', err)
+    }
+  }
+
   useEffect(() => {
     const fetchVideo = async () => {
       try {
@@ -36,6 +48,9 @@ export default function VideoDetailPage() {
         if (response.ok) {
           const data = await response.json()
           setVideo(data.renderJob)
+          if (data.renderJob.status === 'COMPLETED' && data.renderJob.videoUrl && !downloadUrl) {
+            fetchDownloadUrl()
+          }
         }
       } catch (err) {
         console.error('Failed to fetch video:', err)
@@ -57,15 +72,20 @@ export default function VideoDetailPage() {
   }, [params.id, video?.status])
 
   const handleDownload = async () => {
-    try {
-      const response = await fetch(`/api/videos/${params.id}/download`)
-      if (response.ok) {
-        const data = await response.json()
-        setDownloadUrl(data.downloadUrl)
-        window.open(data.downloadUrl, '_blank')
+    if (downloadUrl) {
+      window.open(downloadUrl, '_blank')
+    } else {
+      await fetchDownloadUrl()
+      // downloadUrl state won't be updated yet, fetch directly
+      try {
+        const response = await fetch(`/api/videos/${params.id}/download`)
+        if (response.ok) {
+          const data = await response.json()
+          window.open(data.downloadUrl, '_blank')
+        }
+      } catch (err) {
+        console.error('Failed to get download URL:', err)
       }
-    } catch (err) {
-      console.error('Failed to get download URL:', err)
     }
   }
 
